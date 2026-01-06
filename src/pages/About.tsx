@@ -20,7 +20,7 @@ const About = () => {
                   Empowering Future <span className="gradient-text">Tech Leaders</span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Pyramid Consulting & IT Learnings is a leading IT training and placement company 
+                  Pyramid Consultancy and IT Learning is a leading IT training and placement company 
                   dedicated to bridging the gap between academic learning and industry requirements.
                 </p>
               </div>
@@ -42,7 +42,7 @@ const About = () => {
                     5.5+ Years of Transforming Careers
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Founded with a vision to revolutionize IT education in India, Pyramid Consulting has 
+                    Founded with a vision to revolutionize IT education in India, Pyramid Consultancy and IT Learning has 
                     grown from a small training initiative to a pan-India presence serving over 25,000+ 
                     students across 50+ engineering institutions.
                   </p>
@@ -131,7 +131,7 @@ const About = () => {
                 Ready to Transform Your Institution's Placement Outcomes?
               </h2>
               <p className="text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
-                Join 50+ institutions that trust Pyramid Consulting for their IT training needs.
+                Join 50+ institutions that trust Pyramid Consultancy and IT Learning for their IT training needs.
               </p>
               <Link to="/contact">
                 <Button variant="hero" size="xl" className="bg-accent hover:bg-accent/90">

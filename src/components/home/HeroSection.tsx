@@ -30,9 +30,13 @@ export function HeroSection() {
               <span className="text-sm font-medium text-primary">5.5+ Years of Excellence</span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="gradient-text">Design</span> — <span className="text-foreground">Deliver</span> — <span className="gradient-text">Delight</span>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="gradient-text">Pyramid Consultancy</span> <span className="text-foreground">and IT Learning</span>
             </h1>
+
+            <p className="text-2xl md:text-3xl font-display font-bold text-foreground mt-2">
+              <span className="gradient-text">Design</span> — Deliver — <span className="gradient-text">Delight</span>
+            </p>
 
             <p className="text-xl md:text-2xl text-foreground font-medium">
               Empowering Future Engineers with Expert IT Training
