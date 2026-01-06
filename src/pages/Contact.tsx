@@ -149,25 +149,9 @@ const Contact = () => {
                           <MapPin className="w-6 h-6 text-primary-foreground" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-foreground mb-1">Hyderabad Office (HQ)</h3>
+                          <h3 className="font-semibold text-foreground mb-1">Hyderabad Office</h3>
                           <p className="text-muted-foreground text-sm">
-                            Regus Centre Midtown, iLabs, Hyderabad Technology Park,
-                            Inorbit Mall Road, Hyderabad – 500081
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Ghana Office */}
-                    <div className="bg-background rounded-xl p-6 border border-border/50">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shrink-0">
-                          <MapPin className="w-6 h-6 text-accent-foreground" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">Ghana Office</h3>
-                          <p className="text-muted-foreground text-sm">
-                            Trinity House, OSU, Accra, Ghana
+                            Cokarma – Coworking Space, Gandipet Main Road, Kokapet, Hyderabad
                           </p>
                         </div>
                       </div>
@@ -181,8 +165,8 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                          <a href="tel:+919553419349" className="text-accent hover:underline">
-                            +91 95534 19349
+                          <a href="tel:+919000352999" className="text-accent hover:underline">
+                            +91 9000352999
                           </a>
                         </div>
                       </div>
@@ -232,7 +216,7 @@ const Contact = () => {
                 <div className="text-center">
                   <MapPin className="w-16 h-16 text-accent mx-auto mb-4" />
                   <p className="text-muted-foreground">
-                    Hyderabad Technology Park, Inorbit Mall Road
+                    Cokarma – Coworking Space, Gandipet Main Road, Kokapet, Hyderabad
                   </p>
                 </div>
               </div>
