@@ -11,6 +11,8 @@ import scientLogo from '@/assets/logos/scient-institute.png';
 import stjosephLogo from '@/assets/logos/st-joseph.png';
 import kakatiyaLogo from '@/assets/logos/kakatiya-institute.png';
 import jntuLogo from '@/assets/logos/jntu-hyderabad.png';
+import osmaniaLogo from '@/assets/logos/osmania-university.png';
+import vnrLogo from '@/assets/logos/vnr-vjiet.png';
 
 const institutions = [
   { name: 'CMR Engineering College', logo: cmrLogo },
@@ -23,8 +25,8 @@ const institutions = [
   { name: 'St. Joseph Engineering College', logo: stjosephLogo },
   { name: 'Kakatiya Institute of Technology & Science', logo: kakatiyaLogo },
   { name: 'JNTU Hyderabad', logo: jntuLogo },
-  { name: 'Osmania University', logo: null },
-  { name: 'VNR VJIET', logo: null },
+  { name: 'Osmania University', logo: osmaniaLogo },
+  { name: 'VNR VJIET', logo: vnrLogo },
 ];
 
 export function InstitutionLogos() {
