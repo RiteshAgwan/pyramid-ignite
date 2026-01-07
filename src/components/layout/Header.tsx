@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import pyramidLogo from '@/assets/pyramid-logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -36,14 +37,12 @@ export function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-            <span className="text-primary-foreground font-display font-bold text-xl">P</span>
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-display font-bold text-lg text-foreground">Pyramid</span>
-            <span className="font-display font-medium text-sm text-muted-foreground block -mt-1">Consulting</span>
-          </div>
+        <Link to="/" className="flex items-center group">
+          <img 
+            src={pyramidLogo} 
+            alt="Pyramid Consulting" 
+            className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Navigation */}

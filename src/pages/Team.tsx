@@ -1,64 +1,62 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const teamMembers = [
   {
     name: 'Jeevan',
-    role: 'Chief Executive Officer (CEO)',
+    role: 'CEO & Founder',
     bio: 'Leading our vision to transform engineering education with strategic leadership and industry expertise.',
     initials: 'J',
-    isLeadership: true,
   },
   {
-    name: 'Ektha',
-    role: 'Manager',
-    bio: 'Overseeing day-to-day operations and ensuring excellence in service delivery across all programs.',
-    initials: 'E',
-    isLeadership: true,
+    name: 'Sudheer',
+    role: 'Executive Director',
+    bio: 'Driving organizational growth and strategic partnerships with a focus on excellence.',
+    initials: 'S',
   },
   {
     name: 'Suman',
-    role: 'Operations',
+    role: 'Chief Operations Officer',
     bio: 'Managing operational workflows and coordinating training programs for seamless execution.',
     initials: 'S',
-    isLeadership: false,
+  },
+  {
+    name: 'Ektha',
+    role: 'HR Manager',
+    bio: 'Overseeing talent acquisition and ensuring a positive work culture across all teams.',
+    initials: 'E',
   },
   {
     name: 'Harika',
     role: 'Operations',
     bio: 'Ensuring smooth operations and excellent coordination between institutions and training teams.',
     initials: 'H',
-    isLeadership: false,
   },
   {
-    name: 'Veerana',
-    role: 'Technical Head',
+    name: 'Dr. Veerana',
+    role: 'Head of Training',
     bio: 'Leading our technical training initiatives with deep expertise in modern technologies and development practices.',
-    initials: 'V',
-    isLeadership: true,
+    initials: 'DV',
   },
   {
     name: 'Raj Kumar',
     role: 'Developer',
     bio: 'Building innovative solutions and contributing to our technical training programs with hands-on expertise.',
     initials: 'RK',
-    isLeadership: false,
   },
   {
     name: 'Ritesh Agwan',
     role: 'Developer',
     bio: 'Developing cutting-edge applications and sharing practical development insights with students.',
     initials: 'RA',
-    isLeadership: false,
   },
   {
     name: 'Nagalaxmi',
     role: 'Developer',
     bio: 'Contributing to technical excellence and mentoring students in software development best practices.',
     initials: 'N',
-    isLeadership: false,
   },
 ];
 
@@ -72,9 +70,9 @@ const Team = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-3xl mx-auto text-center">
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Team</span>
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">Meet Our Experts</span>
                 <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mt-4 mb-6">
-                  Meet the <span className="gradient-text">Experts</span> Behind Your Success
+                  Our <span className="gradient-text">Team</span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   Our team of passionate educators and industry professionals are dedicated to 
@@ -85,24 +83,16 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Leadership Team */}
+        {/* Team Section - Unified */}
         <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider">Leadership</span>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                  Our Leadership Team
-                </h2>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.filter(m => m.isLeadership).map((member, index) => (
-                <ScrollReveal key={index} delay={index * 100}>
-                  <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl transition-all duration-300 group">
-                    <div className="w-24 h-24 mx-auto gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <span className="font-display text-3xl font-bold text-primary-foreground">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <ScrollReveal key={index} delay={index * 80}>
+                  <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
+                    {/* Profile Image Placeholder */}
+                    <div className="w-24 h-24 mx-auto gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                      <span className="font-display text-2xl font-bold text-primary-foreground">
                         {member.initials}
                       </span>
                     </div>
@@ -111,55 +101,8 @@ const Team = () => {
                       <h3 className="font-display text-xl font-bold text-foreground mb-1">
                         {member.name}
                       </h3>
-                      <p className="text-accent font-medium mb-4">{member.role}</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                        {member.bio}
-                      </p>
-
-                      <div className="flex justify-center gap-3">
-                        <a href="#" className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                        <a href="#" className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
-                          <Mail className="w-5 h-5" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technical Team */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider">Technical Team</span>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                  Operations & Development
-                </h2>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {teamMembers.filter(m => !m.isLeadership).map((member, index) => (
-                <ScrollReveal key={index} delay={index * 100}>
-                  <div className="bg-card rounded-2xl p-6 shadow-lg border border-border/50 hover:shadow-xl transition-all duration-300 group">
-                    <div className="w-16 h-16 mx-auto gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <span className="font-display text-2xl font-bold text-primary-foreground">
-                        {member.initials}
-                      </span>
-                    </div>
-
-                    <div className="text-center">
-                      <h3 className="font-display text-lg font-bold text-foreground mb-1">
-                        {member.name}
-                      </h3>
-                      <p className="text-accent font-medium text-sm mb-3">{member.role}</p>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
+                      <p className="text-muted-foreground font-medium text-sm mb-4">{member.role}</p>
+                      <p className="text-muted-foreground/80 text-sm leading-relaxed">
                         {member.bio}
                       </p>
                     </div>
