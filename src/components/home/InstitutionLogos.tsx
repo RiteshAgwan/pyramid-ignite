@@ -13,6 +13,9 @@ import kakatiyaLogo from '@/assets/logos/kakatiya-institute.png';
 import jntuLogo from '@/assets/logos/jntu-hyderabad.png';
 import osmaniaLogo from '@/assets/logos/osmania-university.png';
 import vnrLogo from '@/assets/logos/vnr-vjiet.png';
+import rkgitLogo from '@/assets/logos/rkgit.png';
+import mkceLogo from '@/assets/logos/mkce.png';
+import annamacharyaLogo from '@/assets/logos/annamacharya.png';
 
 const institutions = [
   { name: 'CMR Engineering College', logo: cmrLogo },
@@ -27,6 +30,9 @@ const institutions = [
   { name: 'JNTU Hyderabad', logo: jntuLogo },
   { name: 'Osmania University', logo: osmaniaLogo },
   { name: 'VNR VJIET', logo: vnrLogo },
+  { name: 'RKGIT (Raj Kumar Goel Institute of Technology)', logo: rkgitLogo },
+  { name: 'M. Kumarasamy College of Engineering', logo: mkceLogo },
+  { name: 'Annamacharya University', logo: annamacharyaLogo },
 ];
 
 export function InstitutionLogos() {
