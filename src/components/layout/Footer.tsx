@@ -8,6 +8,7 @@ import {
   Facebook,
   ArrowRight
 } from 'lucide-react';
+import pyramidLogo from '@/assets/pyramid-logo.png';
 
 const quickLinks = [
   { name: 'Home', path: '/' },
@@ -31,15 +32,13 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
-                <span className="font-display font-bold text-2xl text-accent-foreground">P</span>
-              </div>
-              <div>
-                <span className="font-display font-bold text-lg">Pyramid Consultancy</span>
-                <span className="font-display font-medium text-sm opacity-80 block">and IT Learning</span>
-              </div>
-            </div>
+            <Link to="/" className="block">
+              <img 
+                src={pyramidLogo} 
+                alt="Pyramid Consulting" 
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
+            </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Building Industry-Ready Engineers. Delivering Placement Success. Empowering future tech leaders with expert IT training and placement services.
             </p>
