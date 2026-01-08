@@ -31,7 +31,7 @@ export function HeroSection() {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="gradient-text">Pyramid Consultancy</span> <span className="text-foreground">and IT Learning</span>
+              <span className="gradient-text">Pyramid Consulting</span> <span className="text-foreground">& IT Learnings</span>
             </h1>
 
             <p className="text-2xl md:text-3xl font-display font-bold text-foreground mt-2">
