@@ -11,7 +11,8 @@ import {
   Code, 
   Cloud, 
   Database,
-  CheckCircle2
+  CheckCircle2,
+  GraduationCap
 } from 'lucide-react';
 
 const mainServices = [
@@ -61,6 +62,14 @@ const techPrograms = [
   { icon: Database, title: 'Data Structures & Algorithms', duration: '12-16 weeks' },
   { icon: Cloud, title: 'Cloud & DevOps', duration: '10-14 weeks' },
   { icon: Laptop, title: 'Web Development', duration: '10-12 weeks' },
+];
+
+const mbaPrograms = [
+  { title: 'MBA – Finance', description: 'Financial management, corporate finance, investments' },
+  { title: 'MBA – Marketing', description: 'Digital marketing, branding, sales strategy' },
+  { title: 'MBA – HR', description: 'Recruitment, HR operations, employee management' },
+  { title: 'MBA – Operations', description: 'Supply chain, project & process management' },
+  { title: 'MBA – Business Analytics', description: 'Data-driven decision making, basic analytics' },
 ];
 
 const Services = () => {
@@ -153,6 +162,35 @@ const Services = () => {
           </div>
         </section>
 
+        {/* MBA Programs */}
+        <section className="py-16 bg-card">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="text-center mb-10">
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">Professional Development</span>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-2">
+                  MBA Training Programs
+                </h2>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+              {mbaPrograms.map((program, index) => (
+                <ScrollReveal key={index} delay={index * 80}>
+                  <div className="bg-background rounded-xl p-5 shadow-md border border-border/50 hover:shadow-lg transition-all group h-full">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        <GraduationCap className="w-5 h-5 text-primary-foreground" />
+                      </div>
+                      <h3 className="font-display font-bold text-foreground text-sm leading-tight">{program.title}</h3>
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{program.description}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* CTA */}
         <section className="py-20 navy-section">
           <div className="container mx-auto px-4 text-center">
