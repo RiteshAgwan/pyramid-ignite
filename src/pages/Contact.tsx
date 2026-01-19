@@ -187,20 +187,6 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    {/* Working Hours */}
-                    <div className="bg-background rounded-xl p-6 border border-border/50">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center shrink-0">
-                          <Clock className="w-6 h-6 text-primary-foreground" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">Working Hours</h3>
-                          <p className="text-muted-foreground text-sm">
-                            Monday - Saturday: 9:00 AM - 6:00 PM
-                          </p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </ScrollReveal>
