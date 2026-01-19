@@ -16,8 +16,16 @@ import vnrLogo from '@/assets/logos/vnr-vjiet.png';
 import rkgitLogo from '@/assets/logos/rkgit.png';
 import mkceLogo from '@/assets/logos/mkce.png';
 import annamacharyaLogo from '@/assets/logos/annamacharya.png';
+import guruNanakLogo from '@/assets/logos/guru-nanak.png';
+import sanjivaniLogo from '@/assets/logos/sanjivani.png';
+import dhanalakshmiLogo from '@/assets/logos/dhanalakshmi.png';
+import krcotLogo from '@/assets/logos/krcot.png';
 
 const institutions = [
+  { name: 'Guru Nanak University', logo: guruNanakLogo },
+  { name: 'Sanjivani University', logo: sanjivaniLogo },
+  { name: 'Dhanalakshmi Srinivasan University', logo: dhanalakshmiLogo },
+  { name: 'K.Ramakrishnan College of Technology', logo: krcotLogo },
   { name: 'CMR Engineering College', logo: cmrLogo },
   { name: 'CVR College of Engineering', logo: cvrLogo },
   { name: 'NIET (Noida Institute of Engineering & Technology)', logo: nietLogo },
