@@ -151,7 +151,7 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Hyderabad Office</h3>
                           <p className="text-muted-foreground text-sm">
-                            Cokarma – Coworking Space, Gandipet Main Road, Kokapet, Hyderabad
+                            Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana, 500075, India
                           </p>
                         </div>
                       </div>
@@ -165,8 +165,8 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                          <a href="tel:+919000352999" className="text-accent hover:underline">
-                            +91 9000352999
+                          <a href="tel:+917093504748" className="text-accent hover:underline">
+                            +91 7093504748
                           </a>
                         </div>
                       </div>
@@ -180,8 +180,8 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                          <a href="mailto:info@pyramidconsulting.in" className="text-accent hover:underline">
-                            info@pyramidconsulting.in
+                          <a href="mailto:operations@pyramidconsulting.co.in" className="text-accent hover:underline">
+                            operations@pyramidconsulting.co.in
                           </a>
                         </div>
                       </div>
@@ -216,7 +216,7 @@ const Contact = () => {
                 <div className="text-center">
                   <MapPin className="w-16 h-16 text-accent mx-auto mb-4" />
                   <p className="text-muted-foreground">
-                    Cokarma – Coworking Space, Gandipet Main Road, Kokapet, Hyderabad
+                    Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana, 500075, India
                   </p>
                 </div>
               </div>

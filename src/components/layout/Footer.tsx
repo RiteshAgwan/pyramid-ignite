@@ -98,19 +98,19 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <span className="text-primary-foreground/70 text-sm">
-                  Cokarma – Coworking Space, Gandipet Main Road, Kokapet, Hyderabad
+                  Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana, 500075, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <a href="tel:+919000352999" className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
-                  +91 9000352999
+                <a href="tel:+917093504748" className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
+                  +91 7093504748
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                <a href="mailto:info@pyramidconsulting.in" className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
-                  info@pyramidconsulting.in
+                <a href="mailto:operations@pyramidconsulting.co.in" className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
+                  operations@pyramidconsulting.co.in
                 </a>
               </li>
             </ul>
