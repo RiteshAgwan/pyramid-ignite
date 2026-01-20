@@ -1,70 +1,46 @@
-import { useState, useEffect } from 'react';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
-const testimonials = [
+// Partner photos
+import vijayaMairPhoto from '@/assets/partners/vijaya-mair.png';
+import amitYadavPhoto from '@/assets/partners/amit-yadav.png';
+import drSaravananPhoto from '@/assets/partners/dr-saravanan.png';
+import drVijayKarthikPhoto from '@/assets/partners/dr-vijay-karthik.png';
+
+const partners = [
   {
     name: 'Vijaya Mair',
-    title: 'President, Telangana TPO Consortium',
-    quote: 'Pyramid Consulting has been instrumental in transforming our placement outcomes. Their hands-on training approach and industry-relevant curriculum have significantly improved our students\' employability.',
-    highlights: ['Hands-on Training', 'Industry Curriculum'],
+    designation: 'Associate Dean – Campus and Corporate Relations',
+    college: 'CVR College of Engineering, Hyderabad',
+    photo: vijayaMairPhoto,
   },
   {
     name: 'Amit Yadav',
-    title: 'DGM Training & Placement, NIET',
-    quote: 'The team at Pyramid brings exceptional professionalism and dedication. Their company-specific training modules have helped our students crack interviews at top MNCs consistently.',
-    highlights: ['Professional Delivery', 'High Placement Ratios'],
+    designation: 'DGM – Training and Placements / Corporate Interface Expert',
+    college: '',
+    photo: amitYadavPhoto,
   },
   {
-    name: 'Dr. V Saravanan',
-    title: 'Training & Placement Officer',
-    quote: 'What sets Pyramid apart is their commitment to student success. The personalized attention and real-world exposure they provide are unmatched in the industry.',
-    highlights: ['Real-World Exposure', 'Student Success'],
+    name: 'Dr. V. Saravanan',
+    designation: 'Training and Placement Officer',
+    college: 'M. Kumarasamy College of Engineering',
+    photo: drSaravananPhoto,
   },
   {
-    name: 'Dr. A Alavudeen',
-    title: 'Academic Director',
-    quote: 'Our collaboration with Pyramid Consulting has resulted in a remarkable improvement in placement statistics. Their innovative training methodologies are truly commendable.',
-    highlights: ['Innovative Methods', 'Improved Statistics'],
+    name: 'Dr. M. Vijay Karthik',
+    designation: 'Training and Placement Officer',
+    college: 'CMR Engineering College',
+    photo: drVijayKarthikPhoto,
   },
   {
-    name: 'Dr. M Vijay Karthik',
-    title: 'Placement Coordinator',
-    quote: 'Pyramid\'s comprehensive approach covering technical skills, aptitude, and soft skills has made a significant difference in our students\' confidence and performance.',
-    highlights: ['Comprehensive Approach', 'Skill Development'],
-  },
-  {
-    name: 'Prof. R Mageshwaran',
-    title: 'Head of Department',
-    quote: 'The dedication and expertise of Pyramid\'s trainers have transformed our students into industry-ready professionals. Highly recommended for any institution serious about placements.',
-    highlights: ['Expert Trainers', 'Industry-Ready Students'],
+    name: 'Prof. R. Mageshwaran',
+    designation: 'Director – Training and Placement',
+    college: 'Global Academy of Technology',
+    photo: null, // No photo uploaded for this partner
   },
 ];
 
 export function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const goToPrev = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToNext = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
   return (
     <section className="py-24 navy-section relative overflow-hidden">
       {/* Background Elements */}
@@ -80,76 +56,56 @@ export function Testimonials() {
             <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mt-2">
               What Our Partners Say
             </h2>
+            <p className="text-primary-foreground/70 mt-4 max-w-2xl mx-auto">
+              Trusted by leading academic institutions across India
+            </p>
           </div>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Main Testimonial Card */}
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-primary-foreground/20">
-              <Quote className="w-12 h-12 text-accent mb-6" />
-              
-              <p className="text-xl md:text-2xl text-primary-foreground leading-relaxed mb-8">
-                "{testimonials[currentIndex].quote}"
-              </p>
+        {/* Partner Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {partners.map((partner, index) => (
+            <ScrollReveal key={partner.name} delay={index * 0.1}>
+              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/15 hover:border-accent/40 transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 h-full flex flex-col items-center text-center">
+                {/* Photo */}
+                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-3 border-accent/30 shadow-lg">
+                  {partner.photo ? (
+                    <img 
+                      src={partner.photo} 
+                      alt={partner.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-accent/20 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-accent">
+                        {partner.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                  )}
+                </div>
 
-              <div className="flex flex-wrap gap-3 mb-8">
-                {testimonials[currentIndex].highlights.map((highlight) => (
-                  <span 
-                    key={highlight}
-                    className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium"
-                  >
-                    ✓ {highlight}
-                  </span>
-                ))}
-              </div>
+                {/* Quote Icon */}
+                <Quote className="w-6 h-6 text-accent/50 mb-3" />
 
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="font-display text-xl font-bold text-primary-foreground">
-                    {testimonials[currentIndex].name}
-                  </h4>
-                  <p className="text-primary-foreground/70">
-                    {testimonials[currentIndex].title}
+                {/* Name */}
+                <h4 className="font-display text-lg font-bold text-primary-foreground mb-2">
+                  {partner.name}
+                </h4>
+
+                {/* Designation */}
+                <p className="text-primary-foreground/80 text-sm leading-relaxed mb-2">
+                  {partner.designation}
+                </p>
+
+                {/* College */}
+                {partner.college && (
+                  <p className="text-accent text-xs font-medium mt-auto pt-2">
+                    {partner.college}
                   </p>
-                </div>
-
-                {/* Navigation */}
-                <div className="flex gap-3">
-                  <button
-                    onClick={goToPrev}
-                    className="w-12 h-12 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
-                  >
-                    <ChevronLeft className="w-6 h-6 text-primary-foreground" />
-                  </button>
-                  <button
-                    onClick={goToNext}
-                    className="w-12 h-12 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
-                  >
-                    <ChevronRight className="w-6 h-6 text-primary-foreground" />
-                  </button>
-                </div>
+                )}
               </div>
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center gap-2 mt-8">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setIsAutoPlaying(false);
-                    setCurrentIndex(index);
-                  }}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex
-                      ? 'bg-accent w-8'
-                      : 'bg-primary-foreground/30 hover:bg-primary-foreground/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
