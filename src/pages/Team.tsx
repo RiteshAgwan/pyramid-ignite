@@ -42,21 +42,9 @@ const teamMembers = [
   },
   {
     name: 'Raj Kumar',
-    role: 'Developer',
-    bio: 'Building innovative solutions and contributing to our technical training programs with hands-on expertise.',
+    role: 'L&D – Digital Operations Lead',
+    bio: 'Leading digital operations and learning & development initiatives with innovative solutions.',
     initials: 'RK',
-  },
-  {
-    name: 'Ritesh Agwan',
-    role: 'Developer',
-    bio: 'Developing cutting-edge applications and sharing practical development insights with students.',
-    initials: 'RA',
-  },
-  {
-    name: 'Nagalaxmi',
-    role: 'Developer',
-    bio: 'Contributing to technical excellence and mentoring students in software development best practices.',
-    initials: 'N',
   },
 ];
 
