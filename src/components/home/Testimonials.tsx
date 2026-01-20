@@ -2,40 +2,50 @@ import { useState, useEffect } from 'react';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
+import vijayaMairImg from '@/assets/partners/vijaya-mair.png';
+import amitYadavImg from '@/assets/partners/amit-yadav.png';
+import drSaravananImg from '@/assets/partners/dr-saravanan.png';
+import drVijayKarthikImg from '@/assets/partners/dr-vijay-karthik.png';
+import profMageshwaranImg from '@/assets/partners/prof-mageshwaran.png';
+
 const testimonials = [
   {
     name: 'Vijaya Mair',
-    title: 'President, Telangana TPO Consortium',
+    title: 'Associate Dean – Campus and Corporate Relations',
+    organization: 'CVR College of Engineering, Hyderabad',
+    image: vijayaMairImg,
     quote: 'Pyramid Consulting has been instrumental in transforming our placement outcomes. Their hands-on training approach and industry-relevant curriculum have significantly improved our students\' employability.',
     highlights: ['Hands-on Training', 'Industry Curriculum'],
   },
   {
     name: 'Amit Yadav',
-    title: 'DGM Training & Placement, NIET',
+    title: 'DGM – Training and Placements',
+    organization: 'Corporate Interface Expert',
+    image: amitYadavImg,
     quote: 'The team at Pyramid brings exceptional professionalism and dedication. Their company-specific training modules have helped our students crack interviews at top MNCs consistently.',
     highlights: ['Professional Delivery', 'High Placement Ratios'],
   },
   {
-    name: 'Dr. V Saravanan',
-    title: 'Training & Placement Officer',
+    name: 'Dr. V. Saravanan',
+    title: 'Training and Placement Officer',
+    organization: 'M. Kumarasamy College of Engineering',
+    image: drSaravananImg,
     quote: 'What sets Pyramid apart is their commitment to student success. The personalized attention and real-world exposure they provide are unmatched in the industry.',
     highlights: ['Real-World Exposure', 'Student Success'],
   },
   {
-    name: 'Dr. A Alavudeen',
-    title: 'Academic Director',
-    quote: 'Our collaboration with Pyramid Consulting has resulted in a remarkable improvement in placement statistics. Their innovative training methodologies are truly commendable.',
-    highlights: ['Innovative Methods', 'Improved Statistics'],
-  },
-  {
-    name: 'Dr. M Vijay Karthik',
-    title: 'Placement Coordinator',
+    name: 'Dr. M. Vijay Karthik',
+    title: 'Training and Placement Officer',
+    organization: 'CMR Engineering College',
+    image: drVijayKarthikImg,
     quote: 'Pyramid\'s comprehensive approach covering technical skills, aptitude, and soft skills has made a significant difference in our students\' confidence and performance.',
     highlights: ['Comprehensive Approach', 'Skill Development'],
   },
   {
-    name: 'Prof. R Mageshwaran',
-    title: 'Head of Department',
+    name: 'Prof. R. Mageshwaran',
+    title: 'Director – Training and Placement',
+    organization: 'Global Academy of Technology',
+    image: profMageshwaranImg,
     quote: 'The dedication and expertise of Pyramid\'s trainers have transformed our students into industry-ready professionals. Highly recommended for any institution serious about placements.',
     highlights: ['Expert Trainers', 'Industry-Ready Students'],
   },
@@ -87,48 +97,65 @@ export function Testimonials() {
           <div className="relative">
             {/* Main Testimonial Card */}
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-primary-foreground/20">
-              <Quote className="w-12 h-12 text-accent mb-6" />
-              
-              <p className="text-xl md:text-2xl text-primary-foreground leading-relaxed mb-8">
-                "{testimonials[currentIndex].quote}"
-              </p>
+              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                {/* Partner Photo */}
+                <div className="flex-shrink-0">
+                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-4 border-accent/30 shadow-xl">
+                    <img 
+                      src={testimonials[currentIndex].image} 
+                      alt={testimonials[currentIndex].name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </div>
 
-              <div className="flex flex-wrap gap-3 mb-8">
-                {testimonials[currentIndex].highlights.map((highlight) => (
-                  <span 
-                    key={highlight}
-                    className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium"
-                  >
-                    ✓ {highlight}
-                  </span>
-                ))}
+                {/* Content */}
+                <div className="flex-1 text-center md:text-left">
+                  <Quote className="w-10 h-10 text-accent mb-4 mx-auto md:mx-0" />
+                  
+                  <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-6">
+                    "{testimonials[currentIndex].quote}"
+                  </p>
+
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+                    {testimonials[currentIndex].highlights.map((highlight) => (
+                      <span 
+                        key={highlight}
+                        className="px-3 py-1.5 bg-accent/20 text-accent rounded-full text-sm font-medium"
+                      >
+                        ✓ {highlight}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div>
+                    <h4 className="font-display text-xl font-bold text-primary-foreground">
+                      {testimonials[currentIndex].name}
+                    </h4>
+                    <p className="text-primary-foreground/80 text-sm">
+                      {testimonials[currentIndex].title}
+                    </p>
+                    <p className="text-accent text-sm font-medium">
+                      {testimonials[currentIndex].organization}
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="font-display text-xl font-bold text-primary-foreground">
-                    {testimonials[currentIndex].name}
-                  </h4>
-                  <p className="text-primary-foreground/70">
-                    {testimonials[currentIndex].title}
-                  </p>
-                </div>
-
-                {/* Navigation */}
-                <div className="flex gap-3">
-                  <button
-                    onClick={goToPrev}
-                    className="w-12 h-12 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
-                  >
-                    <ChevronLeft className="w-6 h-6 text-primary-foreground" />
-                  </button>
-                  <button
-                    onClick={goToNext}
-                    className="w-12 h-12 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
-                  >
-                    <ChevronRight className="w-6 h-6 text-primary-foreground" />
-                  </button>
-                </div>
+              {/* Navigation */}
+              <div className="flex justify-center md:justify-end gap-3 mt-8">
+                <button
+                  onClick={goToPrev}
+                  className="w-12 h-12 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
+                >
+                  <ChevronLeft className="w-6 h-6 text-primary-foreground" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="w-12 h-12 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
+                >
+                  <ChevronRight className="w-6 h-6 text-primary-foreground" />
+                </button>
               </div>
             </div>
 
