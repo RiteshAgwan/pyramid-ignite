@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: 'Amit Yadav',
     title: 'DGM – Training and Placements',
-    organization: 'Corporate Interface Expert',
+    organization: 'Noida Institute of Engineering and Technology (NIET)',
     image: amitYadavImg,
     quote: 'The team at Pyramid brings exceptional professionalism and dedication. Their company-specific training modules have helped our students crack interviews at top MNCs consistently.',
     highlights: ['Professional Delivery', 'High Placement Ratios'],
