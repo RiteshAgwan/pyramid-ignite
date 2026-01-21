@@ -88,11 +88,11 @@ const Team = () => {
                 <ScrollReveal key={index} delay={index * 80}>
                   <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
                     {/* Profile Image */}
-                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 group-hover:scale-110 transition-transform shadow-lg border-2 border-primary/20">
+                    <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-6 group-hover:scale-110 transition-transform shadow-lg border-3 border-primary/20 bg-gradient-to-br from-primary/10 to-accent/10">
                       <img 
                         src={member.image} 
                         alt={member.name}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-[center_15%] scale-110"
                       />
                     </div>
 
