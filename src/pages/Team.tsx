@@ -3,48 +3,57 @@ import { Footer } from '@/components/layout/Footer';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { Mail } from 'lucide-react';
 
+// Team member images
+import jeevanImg from '@/assets/team/jeevan.png';
+import sudheerImg from '@/assets/team/sudheer.png';
+import sumanImg from '@/assets/team/suman.png';
+import ekthaImg from '@/assets/team/ektha.png';
+import harikaImg from '@/assets/team/harika.png';
+import drVeeranaImg from '@/assets/team/dr-veerana.png';
+import rajkumarImg from '@/assets/team/rajkumar.png';
+
 const teamMembers = [
   {
     name: 'Jeevan',
     role: 'CEO & Founder',
     bio: 'Leading our vision to transform engineering education with strategic leadership and industry expertise.',
-    initials: 'J',
+    image: jeevanImg,
   },
   {
     name: 'Sudheer',
     role: 'Executive Director',
     bio: 'Driving organizational growth and strategic partnerships with a focus on excellence.',
-    initials: 'S',
+    image: sudheerImg,
   },
   {
     name: 'Suman',
     role: 'Chief Operations Officer',
     bio: 'Managing operational workflows and coordinating training programs for seamless execution.',
-    initials: 'S',
+    image: sumanImg,
   },
   {
     name: 'Ektha',
     role: 'HR Manager',
     bio: 'Overseeing talent acquisition and ensuring a positive work culture across all teams.',
-    initials: 'E',
+    image: ekthaImg,
   },
   {
     name: 'Harika',
     role: 'Operations',
     bio: 'Ensuring smooth operations and excellent coordination between institutions and training teams.',
-    initials: 'H',
+    image: harikaImg,
   },
   {
     name: 'Dr. Veerana',
     role: 'Head of Training',
     bio: 'Leading our technical training initiatives with deep expertise in modern technologies and development practices.',
-    initials: 'DV',
+    image: drVeeranaImg,
   },
   {
     name: 'Raj Kumar',
     role: 'L&D – Digital Operations Lead',
     bio: 'Leading digital operations and learning & development initiatives with innovative solutions.',
-    initials: 'RK',
+    image: rajkumarImg,
   },
 ];
 
@@ -78,11 +87,13 @@ const Team = () => {
               {teamMembers.map((member, index) => (
                 <ScrollReveal key={index} delay={index * 80}>
                   <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
-                    {/* Profile Image Placeholder */}
-                    <div className="w-24 h-24 mx-auto gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                      <span className="font-display text-2xl font-bold text-primary-foreground">
-                        {member.initials}
-                      </span>
+                    {/* Profile Image */}
+                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 group-hover:scale-110 transition-transform shadow-lg border-2 border-primary/20">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
 
                     <div className="text-center">
