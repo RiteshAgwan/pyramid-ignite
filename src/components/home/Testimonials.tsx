@@ -7,6 +7,7 @@ import amitYadavImg from '@/assets/partners/amit-yadav.png';
 import drSaravananImg from '@/assets/partners/dr-saravanan.png';
 import drVijayKarthikImg from '@/assets/partners/dr-vijay-karthik.png';
 import profMageshwaranImg from '@/assets/partners/prof-mageshwaran.png';
+import vinayChopraImg from '@/assets/partners/vinay-chopra.png';
 
 const testimonials = [
   {
@@ -48,6 +49,14 @@ const testimonials = [
     image: profMageshwaranImg,
     quote: 'The dedication and expertise of Pyramid\'s trainers have transformed our students into industry-ready professionals. Highly recommended for any institution serious about placements.',
     highlights: ['Expert Trainers', 'Industry-Ready Students'],
+  },
+  {
+    name: 'Vinay Chopra',
+    title: 'Director – CCPI',
+    organization: 'Guru Nanak University',
+    image: vinayChopraImg,
+    quote: 'Pyramid Consulting has been a valuable partner in enhancing our students\' career readiness. Their structured approach and industry connections have made a real difference.',
+    highlights: ['Career Readiness', 'Industry Connections'],
   },
 ];
 
