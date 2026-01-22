@@ -98,7 +98,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <span className="text-primary-foreground/70 text-sm">
-                  Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana, 500075, India
+                  CoKarma - Coworking Space, Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana 500075
                 </span>
               </li>
               <li className="flex items-center gap-3">
