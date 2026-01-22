@@ -83,10 +83,10 @@ const Team = () => {
         {/* Team Section - Unified */}
         <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               {teamMembers.map((member, index) => (
                 <ScrollReveal key={index} delay={index * 80}>
-                  <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
+                  <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full w-[280px]">
                     {/* Profile Image */}
                     <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 group-hover:scale-110 transition-transform shadow-lg border-2 border-primary/20">
                       <img 
