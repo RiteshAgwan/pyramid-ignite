@@ -39,11 +39,11 @@ const About = () => {
                     <span className="text-accent font-semibold uppercase tracking-wider">Our Story</span>
                   </div>
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                    5.5+ Years of Transforming Careers
+                    12+ Years of Transforming Careers
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
                     Founded with a vision to revolutionize IT education in India, Pyramid Consultancy and IT Learning has 
-                    grown from a small training initiative to a pan-India presence serving over 25,000+ 
+                    grown from a small training initiative to a pan-India presence serving over 50,000+ 
                     students across 50+ engineering institutions.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
@@ -63,8 +63,8 @@ const About = () => {
               <ScrollReveal delay={200}>
                 <div className="grid grid-cols-2 gap-6">
                   {[
-                    { value: '5.5+', label: 'Years of Excellence' },
-                    { value: '25K+', label: 'Students Placed' },
+                    { value: '12+', label: 'Years of Excellence' },
+                    { value: '50K+', label: 'Students Placed' },
                     { value: '92%', label: 'Placement Rate' },
                     { value: '100+', label: 'Expert Trainers' },
                   ].map((stat, index) => (

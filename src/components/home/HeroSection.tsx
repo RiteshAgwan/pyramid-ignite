@@ -27,7 +27,7 @@ export function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-primary">5.5+ Years of Excellence</span>
+              <span className="text-sm font-medium text-primary">12+ Years of Excellence</span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -89,7 +89,7 @@ export function HeroSection() {
                       <div className="text-sm text-muted-foreground">Placement Rate</div>
                     </div>
                     <div className="bg-muted rounded-xl p-4">
-                      <div className="text-3xl font-display font-bold gradient-text">25K+</div>
+                      <div className="text-3xl font-display font-bold gradient-text">50K+</div>
                       <div className="text-sm text-muted-foreground">Placed Students</div>
                     </div>
                   </div>

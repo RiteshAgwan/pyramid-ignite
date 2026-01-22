@@ -10,8 +10,8 @@ import {
 } from 'lucide-react';
 
 const stats = [
-  { icon: Trophy, value: 5.5, suffix: '+', label: 'Years of Excellence', prefix: '' },
-  { icon: GraduationCap, value: 25000, suffix: '+', label: 'Successful Placements', prefix: '' },
+  { icon: Trophy, value: 12, suffix: '+', label: 'Years of Excellence', prefix: '' },
+  { icon: GraduationCap, value: 50000, suffix: '+', label: 'Successful Placements', prefix: '' },
   { icon: Target, value: 92, suffix: '%', label: 'Placement Success Rate', prefix: '' },
   { icon: Users, value: 100, suffix: '+', label: 'Industry Trainers', prefix: '' },
   { icon: Building2, value: 50, suffix: '+', label: 'Hiring Partners', prefix: '' },

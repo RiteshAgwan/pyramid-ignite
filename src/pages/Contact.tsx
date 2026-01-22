@@ -151,7 +151,7 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Hyderabad Office</h3>
                           <p className="text-muted-foreground text-sm">
-                            Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana, 500075, India
+                            CoKarma - Coworking Space, Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana 500075
                           </p>
                         </div>
                       </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                 <div className="text-center">
                   <MapPin className="w-16 h-16 text-accent mx-auto mb-4" />
                   <p className="text-muted-foreground">
-                    Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana, 500075, India
+                    CoKarma - Coworking Space, Gandipet Main Rd, next to EIPL Apila, Kokapet, Gandipet, Hyderabad, Telangana 500075
                   </p>
                 </div>
               </div>
